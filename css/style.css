@@ -1,0 +1,504 @@
+/*font importing*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*reseting css rules*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --orange: #f78b00;
+    --blue: #00285f;
+    --gray: #ededed;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 500px;
+    background: var(--orange);
+}
+
+.content {
+    max-width: 1024px;
+    min-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 24px;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #00285f83;
+}
+
+nav ul button {
+    border: 1px solid var(--blue);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left: 30px;
+    color: var(--blue);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+nav ul button:hover {
+    transition: background, color 0.6s;
+    background: var(--blue);
+    color: white;
+}
+
+.content .header-block {
+    max-width: 100%;
+    min-width: 320px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    background: var(--blue);
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, o.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, o.5);
+    position: relative;
+    z-index: 10;
+    padding: 15px;
+}
+
+.header-block img {
+    width: 50%;
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
+
+.header-block .text {
+    position: absolute;
+    bottom: 30%;
+    left: 15%;
+}
+
+.header-block .text h2 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.5s;
+}
+
+.header-block .text p {
+    max-width: 280px;
+    color: white;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.4s;
+}
+
+/*Product Catalog*/
+section .catalog {
+    width: 100%;
+    padding: 100px;
+}
+
+section .filter-card {
+    width: 100%;
+    height: 150px;
+    background: var(--gray);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    width: 70%;
+    height: 50px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 10px;
+}
+
+.search-button {
+    width: 25%;
+    height: 50px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background-color: var(--blue);
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: 0.2s ease;
+}
+
+.search-button:hover {
+    background: #dedede;
+    color: var(--blue);
+}
+
+.title-wrapper-catalog {
+    margin-top: 200px;
+    padding-bottom: 20px;
+}
+
+section .card-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px;
+    padding-top: 50px;
+}
+
+section .card-item {
+    height: 400px;
+    background: var(--gray);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-content {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-item img {
+    width: 85%;
+}
+
+.card-item h4 {
+    width: 90%;
+}
+
+.card-item p {
+    width: 90%;
+    font-style: italic;
+    color: #00000070;
+}
+
+.card-item button {
+    width: 90%;
+    padding: 15px 0px;
+    border: none;
+    background: var(--blue);
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.card-item button:hover {
+    background: #dedede;
+    color: var(--blue);
+}
+
+/*About*/
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+.about-content {
+    max-width: 1024px;
+    min-width: 320px;
+    height: 600px;
+    background: #dedede3b;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    width: 25%;
+    min-width: 320px;
+    height: 100%;
+    background: #000000a1;
+    border-radius: 8px;
+}
+
+.right {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10%;
+}
+
+.right h3 {
+    text-align: right;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.right p {
+    max-width: 90%;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-align: right;
+    color: rgb(0, 0, 0, 0.4);
+}
+
+/*Features*/
+.features {
+    width: 100%;
+    height: 100%;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.title-wrapper-features {
+    padding: 20px 0px;
+}
+
+.feature-card-block {
+    max-width: 100%;
+    min-width: 320px;
+    height: 600px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    grid-gap: 30px;
+}
+
+.feature-card-item {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dedede3b;
+    border-radius: 4px;
+}
+
+.feature-text-content {
+    width: 100%;
+    margin: 5px;
+}
+
+.feature-card-item img {
+    width: 64px;
+    height: 64px;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    height: 150px;
+}
+
+footer .main {
+    width: 100%;
+    height: 150px;
+    background: var(--orange);
+    padding: 20px 10px;
+}
+
+.footer-links {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-company, .footer-rental, .footer-contact, .footer-social {
+    color: white;
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin-bottom: 8px;
+}
+
+.main .footer-social img {
+    width: 32px;
+    height: 32px;
+}
+
+footer .last {
+    width: 100%;
+    height: 50px;
+    background: var(--blue);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Responsive adjustments*/
+@media (max-width: 576px) {
+    nav ul li {
+        display: none;
+    }
+
+    .content .header-block {
+        width: 90%;
+        height: 500px; 
+        margin: 0 auto;
+    }
+
+    .header-block img {
+        width: 90%;
+        padding: absolute;
+        right: 5%;
+        top: 15%;
+    }
+
+    .header-block .text {
+        position: absolute;
+        bottom: 15%;
+        left: 15%;
+    }
+
+    .title-wrapper-catalog {
+        margin-top: 195px;
+        padding-bottom: 40px;
+    }
+
+
+    section .filter-card {
+        width: 90%;
+        padding: 0px 10px;
+    }
+
+    .search-input {
+        width: 70%;
+    }
+
+    .search-button {
+        width: 25%;
+    }
+
+    section .card-item {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .about {
+        margin-top: 0px;
+    }
+
+    .title-wrapper-about {
+        margin-bottom: 40px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 90%;
+    }
+
+    .right p {
+        width: 100%;
+        margin: 0px;
+        text-align: left;
+    }
+
+    .features {
+        height: 100%;
+    }
+
+    .feature-card-block {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        width: 100%;
+        height: 180px;
+    }
+
+    footer .main {
+        height: 100%;
+        margin: auto;
+    }
+
+    .footer-links {
+        width: 100%;
+        font-size: 1em;
+    }
+
+}
